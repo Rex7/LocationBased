@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">LocationBased</string>
+
+    <string name="title">My Location Tracker</string>
+    <string name="lat">Latitude</string>
+    <string name="lon">Longitude</string>
+    <string name="check_internet">track child</string>
+    <string name="request_not_granted">Required Permission not granted"</string>
+    <string name="register">Register</string>
+    <string name="welcome_to_our_login_system">Registration</string>
+    <string name="emailid">EmailId</string>
+    <string name="phoneno">PhoneNo</string>
+    <string name="submit">Submit</string>
+    <string name="username">Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="child_tracker">Child tracker</string>
+    <string name="begin_tracking">Begin Tracking</string>
+    <string name="show_child">show Child</string>
+    <string name="my_current_state">My Current State</string>
+</resources>

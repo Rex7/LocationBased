@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControlActivity">
+    <TextView
+        android:id="@+id/tracker_title"
+        android:text="@string/child_tracker"
+        android:textColor="#000"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/beginTracking"
+        android:layout_below="@+id/tracker_title"
+        android:layout_centerHorizontal="true"
+        android:layout_width="150dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/begin_tracking"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/showChild"
+        android:layout_below="@+id/beginTracking"
+        android:layout_centerHorizontal="true"
+        android:layout_width="150dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/show_child"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

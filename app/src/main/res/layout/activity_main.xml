@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.regischarles.locationbased.MainActivity">
+    <TextView
+        android:id="@+id/TitleTag"
+        android:text="@string/title"
+        android:textSize="22sp"
+        android:textColor="#000"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_below="@+id/TitleTag"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:layout_marginTop="100dp"
+        android:textColor="#000"
+        android:text="@string/lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_below="@+id/latitude"
+        android:text="@string/lon"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/SubmitButton"
+        android:layout_marginTop="22dp"
+        android:text="@string/check_internet"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_below="@+id/longitude"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/ResulText"
+        android:layout_below="@+id/SubmitButton"
+        android:text="@string/my_current_state"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:textSize="22sp"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

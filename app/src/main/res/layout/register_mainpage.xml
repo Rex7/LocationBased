@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.regischarles.locationbased.Register">
+
+    <ScrollView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text="@string/welcome_to_our_login_system"
+                android:textColor="#000"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="120dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/username"
+                android:textColorHint="#000"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="120dp"
+                android:ems="10"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/enter_password"
+                android:inputType="textPassword"
+                android:textColorHint="#000"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/PasswordCheck"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:gravity="center_horizontal"
+                android:hint="Enter  password again"
+                android:layout_marginLeft="120dp"
+                android:inputType="textPassword"
+                android:textColorHint="#000"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PasswordCheck"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:ems="10"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/emailid"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#000"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/phoneno"
+                android:inputType="number"
+                android:textColorHint="#000"
+                android:textSize="25sp" />
+
+
+            <Button
+                android:id="@+id/button"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:text="@string/submit"
+                android:textSize="25sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

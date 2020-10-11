@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.regischarles.locationbased.MainPage">
+    <TextView
+        android:id="@+id/Title"
+        android:text=" Child Tracker"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:textSize="25sp"
+
+        android:textColor="#000"
+        android:layout_marginTop="55dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/PhoneNo"
+        android:hint="Enter phone No"
+        android:layout_marginTop="55dp"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:inputType="phone"
+        android:textColorHint="#000"
+        android:layout_below="@+id/Title"
+        android:layout_centerHorizontal="true"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/PassWord"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/PhoneNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textColorHint="#000"
+        android:textSize="22sp" />
+    <Button
+        android:id="@+id/Login"
+        android:text="Login"
+        android:textSize="22sp"
+        android:layout_below="@+id/PassWord"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
