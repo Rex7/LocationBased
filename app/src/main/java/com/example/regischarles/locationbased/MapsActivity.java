@@ -1,7 +1,6 @@
 package com.example.regischarles.locationbased;
 
-import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -27,18 +26,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import androidx.fragment.app.FragmentActivity;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     SessionManage sessionManage;
     RequestQueue requestQueue;
-    private MarkerOptions options=new MarkerOptions();
+    private MarkerOptions options = new MarkerOptions();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        sessionManage=new SessionManage(getApplicationContext());
+        sessionManage = new SessionManage(getApplicationContext());
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -46,14 +47,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
-
     @Override
     public void onMapReady(final GoogleMap googleMap) {
-        final ArrayList<LatLng> markers=new ArrayList<>();
+        final ArrayList<LatLng> markers = new ArrayList<>();
         mMap = googleMap;
         StringRequest stringRequest;
-        requestQueue=VolleySingle.getInstance().getRequestQueue();
-        stringRequest= new StringRequest(Request.Method.POST, "http://mysimplepage.freeiz.com/getAllRecord.php", new Response.Listener<String>() {
+        requestQueue = VolleySingle.getInstance().getRequestQueue();
+        stringRequest = new StringRequest(Request.Method.POST, "http://mysimplepage.freeiz.com/getAllRecord.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
@@ -62,13 +62,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     JSONArray jsonarray = new JSONArray(response);
                     for (int i = 0; i < jsonarray.length(); i++) {
                         JSONObject jsonobject = jsonarray.getJSONObject(i);
-                        Double lat = Double.valueOf(jsonobject.getString("latitude"));
-                        Double lon = Double.valueOf(jsonobject.getString("longitude"));
-                        markers.add(new LatLng(lat,lon));
+                        double lat = Double.parseDouble(jsonobject.getString("latitude"));
+                        double lon = Double.parseDouble(jsonobject.getString("longitude"));
+                        markers.add(new LatLng(lat, lon));
                         googleMap.addMarker(new MarkerOptions().position(markers.get(i)));
                         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markers.get(i), 17.0f));
-                        Log.v("UniqueTag","lat "+lat);
-                        Log.v("UniqueTag","lon "+lon);
+                        Log.v("UniqueTag", "lat " + lat);
+                        Log.v("UniqueTag", "lon " + lon);
 
                     }
 
@@ -77,22 +77,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     e.printStackTrace();
                 }
 
-                Log.v("response ","data "+response);
+                Log.v("response ", "data " + response);
             }
-        },new Response.ErrorListener() {
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(getApplicationContext(), "" + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        })
-        {
+        }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 HashMap<String, String> data = new HashMap<>();
                 data.put("phone", sessionManage.getUserDetail().get("phone"));
-
-
-
 
 
                 return data;
@@ -106,14 +102,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
         for (LatLng point : markers) {
-            Log.v("UniqueTag","point"+point.latitude);
+            Log.v("UniqueTag", "point" + point.latitude);
             options.position(point);
             options.title("someTitle");
 
 
-
         }
-
 
 
     }

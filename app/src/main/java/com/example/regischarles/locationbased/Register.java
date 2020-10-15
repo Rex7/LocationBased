@@ -2,7 +2,6 @@ package com.example.regischarles.locationbased;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +21,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
     EditText User,pass,email,phone,passcheck;
